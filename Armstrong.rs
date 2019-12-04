@@ -1,18 +1,14 @@
 use std::io;
-
 fn main()
 {
   let mut n = String::new();
   println!("Enter a number: ");
   io::stdin().read_line(&mut n).unwrap();
-
   match n.trim_end().parse::<i32>() 
   {
     Ok(i) => check(i),
     Err(_) => println!("Invalid number."),
-  }
-  
-}
+  }}
 
 fn check(mut n: i32)
 {
@@ -34,16 +30,12 @@ fn check(mut n: i32)
   n = n / 10;
   }
 
-  if temp == sum 
-  {
+  if temp == sum {
     println!("{} is an Armstrong number",temp);
   }
-  else
-  {
+  else{
   println!("{} is not an Armstrong number ",temp);
-  }
-
-}
+  }}
 
 fn power(mut len: i32, rem: i32)->i32
 {
