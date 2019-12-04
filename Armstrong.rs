@@ -16,14 +16,21 @@ fn main()
 
 fn check(mut n: i32)
 {
-  let mut rem;
   let mut sum = 0;
+  let mut l=0;
+  let mut rem;
   let temp = n;
 
+   while n != 0 
+    {
+        n /= 10; 
+        l = l + 1;
+    }
+  n = temp;
   while n > 0 
   {
   rem = n % 10 ;
-  sum = sum + (rem * rem * rem);
+  sum = sum + power(l , rem);
   n = n / 10;
   }
 
@@ -37,3 +44,15 @@ fn check(mut n: i32)
   }
 
 }
+
+fn power(mut len: i32, rem: i32)->i32
+{
+  let mut p = 1;
+  while len != 0 
+  {
+    p = p * rem ;
+    len = len - 1;
+  }
+  return p;
+}
+
