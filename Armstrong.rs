@@ -6,7 +6,7 @@ fn main()
   println!("Enter a number: ");
   io::stdin().read_line(&mut n).unwrap();
 
-  match n.trim_right().parse::<i32>() 
+  match n.trim_end().parse::<i32>() 
   {
     Ok(i) => check(i),
     Err(_) => println!("Invalid number."),
